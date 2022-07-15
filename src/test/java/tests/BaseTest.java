@@ -5,15 +5,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 
-    public WebDriver driver;
+    WebDriver driver;
 
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Roman Yarmolenko\\IdeaProjects\\Framework\\src\\main\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("http://www.leafground.com");
+
     }
+
     public void tearDown(){
         driver.quit();
-
     }
 }
